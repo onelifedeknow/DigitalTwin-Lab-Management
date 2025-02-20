@@ -1,4 +1,4 @@
-效果展示：https://www.thingjs.com/guide/sampleindex.html?m=examples/js/sample_025_ExplosiveView.js
+效果展示：https://www.thingjs.com/s/b2ae826c9efcdf33b7d3e917
 // 加载场景代码 
 var app = new THING.App({
     url: 'https://www.thingjs.com/static/models/406e419fae9000a47a4a8899'
@@ -24,7 +24,7 @@ var expandCount = 0;        // 发电机展开次数
 
 // 场景加载完成后执行
 app.on('load', function (ev) {
-    initThingJsTip("模型爆炸图，指一个模型对象拆解展开的效果。一个模型要做爆炸图，可在3dmax建模时根据爆炸图拆分需要，定义并命名各子对象（或叫子模型、子节点）。这些子对象在ThingJS在线开发中可作为模型子节点来控制，这些子节点可像单独模型对象物体一样进行移动、添加事件等操作。"); 
+    
     generatorObj = app.query('#generator')[0];  // 查询发电机对象
     nodeJsonData = getNode(generatorObj);       // 获取发电机模型节点对象
     app.camera.position = [8.607320990228896, 4.659529165486485, 2.463883920016444]; // 设置摄像机位置
