@@ -1,3 +1,4 @@
+效果展示：https://www.thingjs.com/guide/sampleindex.html?m=examples/js/sample_022_BuildingExpandInner.js
 /** 说明：展示楼层中的内部结构
  *  功能：展示楼层内的Thing模型、门、墙、misc、地板、屋顶、房间面积
  *  备注：楼层下，只有在CampusBuilder中编辑了UserID、Name或自定义属性的模型（摆放的模型），
