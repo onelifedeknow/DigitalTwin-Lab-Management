@@ -22,7 +22,6 @@ app.on('load', function (ev) {
     new THING.widget.Button('获取 Misc', getMisc); // 获取楼层中的misc类模型
     new THING.widget.Button('获取楼层地板', getFloor); // 获取楼层地板
     new THING.widget.Button('获取楼层屋顶', getFloorRoof); // 获取楼层屋顶  
-    new THING.widget.Button('获取房间面积', getRoomArea); // 获取房间面积
     new THING.widget.Button('重置', init); // 恢复初始化设置
 
     $("input[type='button']").hide(); // 隐藏按钮
@@ -111,26 +110,6 @@ function getFloorRoof() {
     createUIAnchor('text', roof, '楼层屋顶');
 }
 
-// 获取楼层内房间面积
-function getRoomArea() {
-    // 初始化设置
-    init();
-
-    var floor = app.level.current; // 当前楼层
-    var textRegions = app.query('.TextRegion'); // 获取TextRegion类
-    var rooms = floor.rooms; // 楼层的房间
-    rooms.forEach(function (room) {
-        room.roof.visible = true; // 显示房间屋顶
-        room.roof.style.opacity = 0.8; // 设置透明度
-        room.roof.style.color = '#0000ff'; // 设置颜色
-
-        var area = room.area.toFixed(2); // 获取房间面积 保留小数点后两位
-        //添加标注
-        createUIAnchor('text', room, area + '平方米');
-
-        initThingJsTip("展示房间面积");
-    })
-}
 
 // 初始化设置
 function init() {
