@@ -1,4 +1,4 @@
-效果展示：https://www.thingjs.com/s/b2ae826c9efcdf33b7d3e917
+//效果展示：https://www.thingjs.com/s/b2ae826c9efcdf33b7d3e917
 // 加载场景代码 
 var app = new THING.App({
     url: 'https://www.thingjs.com/static/models/406e419fae9000a47a4a8899'
